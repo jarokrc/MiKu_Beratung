@@ -1,1 +1,53 @@
-node_modules
+# Node / frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+.vitest/
+frontend/.vitest/
+coverage/
+
+# Archived/unused
+about-nepoužitý/
+about-nepouzity/
+
+# Env
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/pnpm-debug.log*
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+frontend/.vscode/
+frontend/.idea/
+
+# Python (scripts, future backend)
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+.envrc
+
+# Builds / cache
+*.swp
+*.swo
