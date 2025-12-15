@@ -2,7 +2,7 @@
 import Hero from "@/sections/Hero";
 import { useI18n } from "@/app/I18nProvider";
 import homeImg from "@/assets/home/office.webp";
-import logoImg from "@/assets/logo/logo.webp";
+import logoImg from "@/assets/logo/logo2.webp";
 
 const HomePage = () => {
   const { t } = useI18n();

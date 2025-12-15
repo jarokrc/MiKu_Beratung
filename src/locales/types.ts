@@ -13,6 +13,7 @@ export type Translation = {
     about: string;
     privacy: string;
     cookies: string;
+    legalNotice: string,
   };
   home: {
     brand: string;
@@ -105,5 +106,23 @@ export type Translation = {
     title: string;
     description: string;
     back: string;
+  };
+
+  // ⬇️⬇️⬇️ DOPLNENÉ
+  legalNotice: {
+    metaTitle: string;
+    metaDescription: string;
+    title: string;
+
+    projectHeading: string;
+    projectParagraphs: string[];
+
+    scopeHeading: string;
+    scopeParagraphs: string[];
+
+    importantHeading: string;
+    importantBullets: string[];
+
+    backHome: string;
   };
 };

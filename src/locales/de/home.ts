@@ -1,12 +1,12 @@
 export default {
   home: {
-    brand: "MiKu Beratung",
+    brand: "MiKu Begleitung",
     hero: {
-      badge: "Psychologische Beratung & NLP",
-      title: "Neue Perspektive: Coaching & NLP für Klarheit und stabile Entscheidungen",
+      badge: "Psychosoziale Begleitung",
+      title: "Neue Perspektiven durch Begleitung & NLP",
       subtitle:
-        "Strukturierte, einfühlsame und lösungsorientierte Begleitung – besonders dann, wenn Gedanken feststecken, Prioritäten unklar wirken oder Entscheidungen schwerfallen.",
-      primaryCta: "Erstgespräch (kostenfrei) vereinbaren",
+        "Ein strukturierter, wertschätzender Rahmen zur Reflexion und Orientierung – besonders in Phasen innerer Unklarheit, Entscheidungsfindung oder persönlicher Neuordnung.",
+      primaryCta: "Unverbindliches Erstgespräch anfragen",
       secondaryCta: "Kontakt aufnehmen",
     },
     highlights: {
@@ -18,14 +18,25 @@ export default {
       ],
     },
     approach: {
-      title: "Mein Ansatz",
-      text: "Moderne psychologische Beratung kombiniert mit praxisnahen NLP-Techniken für sofort spürbare Wirkung.",
-      items: [
-        { title: "Strukturiert & verständlich", description: "Klare Schritte, transparente Methode, jederzeit nachvollziehbar." },
-        { title: "Einfühlsam & wertfrei", description: "Kein Urteil, nur aktives Zuhören und ein sicherer Rahmen." },
-        { title: "Direkt anwendbar", description: "Praktische Werkzeuge, die Sie sofort im Alltag nutzen können." },
-      ],
+  title: "Mein Ansatz",
+  text:
+    "Psychosoziale Begleitung im Rahmen einer laufenden Ausbildung, verbunden mit ausgewählten NLP-Methoden, die zu Lern-, Reflexions- und Entwicklungszwecken eingesetzt werden.",
+  items: [
+    {
+      title: "Strukturiert & nachvollziehbar",
+      description: "Klare Gesprächsführung im Ausbildungsrahmen mit transparenter Zielsetzung.",
     },
+    {
+      title: "Wertschätzend & ressourcenorientiert",
+      description: "Ein sicherer Raum ohne Bewertung oder therapeutischen Anspruch.",
+    },
+    {
+      title: "Reflexions- & entwicklungsorientiert",
+      description: "Impulse zur Selbstwahrnehmung und persönlichen Weiterentwicklung.",
+    },
+  ],
+},
+
     steps: {
       title: "Gemeinsam erreichen wir",
       items: [

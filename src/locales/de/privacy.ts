@@ -2,14 +2,15 @@ export default {
   privacy: {
     title: "Datenschutz (Studienzwecke)",
     intro:
-      "Diese Seite dient zu Studien- und Praxiszwecken im Rahmen der Ausbildung von Michael Kucerka (Lebens- und Sozialberatung, Schwerpunkt NLP & Krisenintervention an der ROK Akademie). Es werden keine produktiven Dienste angeboten und keine personenbezogenen Daten zu kommerziellen Zwecken verarbeitet.",
+      "Diese Webseite dient ausschließlich der Darstellung meiner Ausbildung an der ROK Akademie im Bereich Lebens- und Sozialberatung (LSB) mit NLP sowie dem Sammeln praktischer Erfahrungen. Es handelt sich um ein nicht-kommerzielles Ausbildungsprojekt ohne gewerbliches Angebot.",
     sections: [
       {
         heading: "Verantwortlich",
         paragraphs: [
-          "Michael Kucerka (Studierender, Praktikum)",
+          "Michael Kucerka (Studierender der Lebens- und Sozialberatung, ROK Akademie)",
+          "Kein Gewerbeschein, keine entgeltliche oder gewerbliche Beratung.",
           "Kontakt per E-Mail.",
-          "Zweck: Studium / praktischer Übungsrahmen",
+          "Zweck: Studium / praktischer Übungs- und Erfahrungsrahmen",
         ],
       },
       {
@@ -22,7 +23,9 @@ export default {
       {
         heading: "Rechtsgrundlage",
         paragraphs: [
-          "Das Projekt ist nicht kommerziell. Daten werden nur verarbeitet, wenn Sie diese freiwillig übermitteln (z. B. per Kontaktformular). Die Nutzung dient ausschließlich Studienzwecken und der fachlichen Übung.",
+          "Dieses Projekt ist nicht kommerziell. Alle Inhalte dienen ausschließlich Lern-, Übungs- und Dokumentationszwecken im Rahmen der Ausbildung.",
+          "Die dargestellten Gespräche, Methoden und Interventionen stellen keine Therapie, keine medizinische Behandlung und keine professionelle Beratung im rechtlichen Sinne dar.",
+          "Personenbezogene Daten werden nur verarbeitet, wenn diese freiwillig übermittelt werden (z. B. per Kontaktformular).",
         ],
       },
       {

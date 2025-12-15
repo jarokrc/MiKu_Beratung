@@ -3,8 +3,9 @@ export default {
     title: "Etwas Wichtiges über mich",
     intro: [
       "Ich bin Michael, Student der Lebens- und Sozialberatung (i. A. u. S.) an der ROK Akademie.",
-      "Ich kombiniere strukturierte NLP-Methoden mit psychologischen Grundlagen, um Menschen dabei zu unterstützen, klarer zu denken, Muster zu erkennen und Entscheidungen leichter zu treffen.",
-      "Mein Fokus liegt auf alltagsnahen, sofort anwendbaren Werkzeugen.",
+    "Im Rahmen meiner Ausbildung arbeite ich mit psychosozialer Begleitung und ausgewählten NLP-Methoden, um Denkprozesse zu reflektieren, Muster bewusst zu machen und neue Perspektiven zu eröffnen.",
+    "Der Fokus liegt auf Lern-, Übungs- und Entwicklungsprozessen im Ausbildungsrahmen.",
+    "        ",
     ],
     goalTitle: "Was ich möchte",
     goals: [
@@ -15,7 +16,7 @@ export default {
     ],
     openTitle: "Offen für Austausch",
     openText:
-      "Ich bin offen für Menschen, die sich mit Beratung, Psychologie, NLP oder Krisenbegleitung beschäftigen – privat, professionell oder im Studium.",
+      "Ich schätze den Austausch mit Menschen, die sich mit psychosozialen Themen, Psychologie, NLP oder Krisenintervention auseinandersetzen – aus persönlichem Interesse, im Studium oder im beruflichen Alltag.",
     methodsTitle: "Methoden, mit denen ich arbeite",
     nlpTitle: "NLP-Methoden",
     nlpItems: ["Timeline-Arbeit", "Future Pace", "Reframing-Arten", "Ressourcenanker", "Submodalitäten"],

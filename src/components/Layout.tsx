@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { ReactNode, useEffect, useState } from "react";
 import { useI18n } from "@/app/I18nProvider";
-import logoImg from "@/assets/logo/logo.webp";
+import logoImg from "@/assets/logo/logo2.webp";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { t } = useI18n();
@@ -35,7 +35,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logoImg}
-              alt="MiKu Beratung Logo"
+              alt="MiKu Begleitung Logo"
               className="h-10 w-auto rounded-xl border border-slate-200 bg-white/80 p-1 shadow-sm"
               loading="lazy"
               decoding="async"
@@ -110,11 +110,12 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
           <span className="inline-flex items-center gap-2">
             <span aria-hidden className="text-lg">©</span>
-            <span>{new Date().getFullYear()} MiKu Beratung</span>
+            <span>{new Date().getFullYear()} MiKu Begleitung</span>
           </span>
           <div className="flex flex-wrap items-center gap-4">
             <Link to="/datenschutz" className="hover:text-blue-800">{t.nav.privacy}</Link>
             <Link to="/cookies" className="hover:text-blue-800">{t.nav.cookies}</Link>
+            <Link to="/rechtlicher-hinweis" className="hover:text-blue-800">{t.nav.legalNotice}</Link>
           </div>
         </div>
       </footer>

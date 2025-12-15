@@ -1,11 +1,13 @@
+import legalNotice from "./legalNotice";
+
 export default {
   meta: {
-    homeTitle: "MiKu Beratung | Psychologische Beratung & NLP",
-    homeDescription: "MiKu Beratung: Psychologische Beratung und NLP für Klarheit, Struktur und nachhaltige Veränderung.",
-    contactTitle: "Kontakt | MiKu Beratung",
-    aboutTitle: "Über mich | MiKu Beratung",
-    privacyTitle: "Datenschutz | MiKu Beratung",
-    cookiesTitle: "Cookie-Hinweise | MiKu Beratung",
+    homeTitle: "MiKu | Ausbildungsprojekt – Psychosoziale Begleitung & NLP",
+    homeDescription: "Ausbildungsprojekt im Rahmen der Lebens- und Sozialberatung (LSB) mit NLP. Lern-, Reflexions- und Entwicklungszwecke.",
+    contactTitle: "Kontakt | Miku Begleitung",
+    aboutTitle: "Über mich | MiKu Begleitung",
+    privacyTitle: "Datenschutz | MiKu Begleitung",
+    cookiesTitle: "Cookie-Hinweise | MiKu Begleitung",
   },
   nav: {
     home: "Startseite",
@@ -13,5 +15,6 @@ export default {
     about: "Über mich",
     privacy: "Datenschutz",
     cookies: "Cookies",
+    legalNotice : "Rechtlicher Hinweis",
   },
 };
