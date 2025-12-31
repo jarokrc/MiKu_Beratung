@@ -7,12 +7,25 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const { t } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [showCookies, setShowCookies] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const stored = typeof window !== "undefined" ? window.localStorage.getItem("cookie_notice_accepted") : null;
     if (!stored) {
       setShowCookies(true);
     }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 220);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -23,14 +36,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
     }`;
 
   return (
-    <div className="min-h-screen bg-[var(--sand)] text-[var(--ink)]">
+    <div className="min-h-screen bg-[var(--sand)] text-[var(--ink)] flex flex-col">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-lg focus:ring-2 focus:ring-blue-700"
       >
         Skip to content
       </a>
-      <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/85 backdrop-blur">
+      <header className="relative z-20 border-b border-slate-200 bg-white/85 backdrop-blur md:sticky md:top-0">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -102,9 +115,33 @@ const Layout = ({ children }: { children: ReactNode }) => {
         )}
       </header>
 
-      <main id="main-content" className="mx-auto max-w-6xl px-6 py-10">
+      <main id="main-content" className="mx-auto max-w-6xl px-6 py-10 flex-1">
         {children}
       </main>
+
+      {showScrollTop && (
+        <button
+          type="button"
+          className="fixed bottom-5 right-5 z-30 inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-slate-200/95 text-slate-800 shadow-lg transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--cta)] focus-visible:ring-offset-2 md:hidden"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Back to top"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
+        </button>
+      )}
 
       <footer className="border-t border-slate-200 bg-white/90">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
