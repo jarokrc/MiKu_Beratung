@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -11,6 +12,17 @@ import LegalNotice from "@/pages/LegalNotice";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 const App = () => {
+  useEffect(() => {
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", handleContextMenu);
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />

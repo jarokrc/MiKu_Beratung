@@ -1,17 +1,20 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import contactImg from "@/assets/contact/cesta.webp";
+import emailImg from "@/assets/cookies/misko.png";
 
+/*
 const buildEmail = () => {
   const userChars = [109, 105, 99, 104, 97, 101, 108, 46, 107, 117, 99, 101, 114, 107, 97, 56]; 
   const domainChars = [103, 109, 97, 105, 108, 46, 99, 111, 109]; 
   const toStr = (chars: number[]) => chars.map((c) => String.fromCharCode(c)).join("");
   return `${toStr(userChars)}@${toStr(domainChars)}`;
 };
+*/
 
 const Contact = () => {
   const { t, locale } = useI18n();
-  const email = buildEmail();
+  // const email = buildEmail();
   const noticeRef = useRef<HTMLParagraphElement | null>(null);
   const [animatedNotice, setAnimatedNotice] = useState("");
   const hasStarted = useRef(false);
@@ -83,9 +86,13 @@ const Contact = () => {
           </p>
           <p className="text-sm text-slate-600 md:text-base">
             {t.contact.mail.label}{" "}
-            <a className="font-semibold text-blue-700 hover:text-blue-800" href={`mailto:${email}`}>
-              {email}
-            </a>
+            <img
+              src={emailImg}
+              alt="Kontakt"
+              className="inline-block h-4 w-auto -translate-y-px align-middle md:h-5"
+              loading="lazy"
+              decoding="async"
+            />
           </p>
         </div>
 

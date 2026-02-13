@@ -1,18 +1,20 @@
 import { Helmet } from "react-helmet-async";
-import { useMemo } from "react";
 import { useI18n } from "@/app/I18nProvider";
 import privacyImg from "@/assets/privacy/gdpr.webp";
+import emailImg from "@/assets/cookies/misko.png";
 
+/*
 const buildEmail = () => {
   const userChars = [109, 105, 99, 104, 97, 101, 108, 46, 107, 117, 99, 101, 114, 107, 97, 56]; 
   const domainChars = [103, 109, 97, 105, 108, 46, 99, 111, 109]; 
   const toStr = (chars: number[]) => chars.map((c) => String.fromCharCode(c)).join("");
   return `${toStr(userChars)}@${toStr(domainChars)}`;
 };
+*/
 
 const PrivacyPage = () => {
   const { t } = useI18n();
-  const email = useMemo(() => buildEmail(), []);
+  // const email = useMemo(() => buildEmail(), []);
 
   return (
     <div className="space-y-6">
@@ -47,9 +49,13 @@ const PrivacyPage = () => {
                 {paragraph.toLowerCase().includes("kontakt per e-mail") ? (
                   <>
                     Kontakt per E-Mail:{" "}
-                    <a className="font-semibold text-blue-700 hover:text-blue-800" href={`mailto:${email}`}>
-                      {email}
-                    </a>
+                    <img
+                      src={emailImg}
+                      alt="Kontakt"
+                      className="inline-block h-4 w-auto -translate-y-px align-middle md:h-5"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </>
                 ) : (
                   paragraph
@@ -69,12 +75,13 @@ const PrivacyPage = () => {
               {paragraph}
             </p>
           ))}
-          <a
-            className="text-sm font-medium text-blue-700 hover:text-blue-800 md:text-base"
-            href={`mailto:${email}`}
-          >
-            {email}
-          </a>
+          <img
+            src={emailImg}
+            alt="Kontakt"
+            className="h-4 w-auto md:h-5"
+            loading="lazy"
+            decoding="async"
+          />
         </section>
       </div>
     </div>
